@@ -51,3 +51,5 @@ changeArg(a, objA);
 
 console.log(a);
 console.log(objA);
+/* call by value 는 값을 복사해오기 때문에 프로퍼티를 변경시키지 않는다
+call by reference는 object 자체의 주소를 참조하므로 object의 프로퍼티를 변경시킬 수 있다
