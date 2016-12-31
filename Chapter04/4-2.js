@@ -115,6 +115,26 @@ function func3(x, y, z) {
   return x + y + z;
 }
 
-console.log('func0.length - ' + func0.length);
-console.log('func1.length - ' + func1.length);
-console.log('func2.length - ' + func2.length);
+console.log('func0.length - ' + func0.length);  // 0
+console.log('func1.length - ' + func1.length);  // 1
+console.log('func2.length - ' + func2.length);  // 2
+console.log('func3.length - ' + func3.length);  // 3
+// length 프로퍼티는 함수가 정상적으로 실행될 때 기대되는 인자의 개수를 나타낸다
+
+
+/* [[Prototype]]은 객체 입장에서 자신의 부모 역하을 하는 프로토타입 객체를 가리키는 반면에
+함수 객체가 가지는 prototype 프로퍼티는 이 함수가 생성자로 사용될 때
+이 함수를 통해서 생성된 객체의 부모 역할을 하는 프로토타입 객체를 가리킨다
+
+자바스크립트에서는 함수를 생성할때, 함수 자신과 연결된 프로토타입 객체를 동시에 생성하며,
+이 둘은 각각 prototype과 constructor라는 프로퍼티로 서로를 참조하게된다
+*/
+
+
+/* 함수 객체와 프로토타입 객체와의 관계를 보여주는 코드 */
+function myFunction() {
+  return true;
+}
+
+console.dir(myFunction.prototype);
+console.dir(myFunction.prototype.constructor);
